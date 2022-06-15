@@ -22,6 +22,16 @@ h6 {
   margin: 0; /* Сбрасываем Margin у всех Heading'ов */
 }
 
+/* Разделитель */
+hr {
+  display: block; /* Block */
+  height: 100%; /* 100% */
+  height: 1px; /* Высота */
+  margin: 40px 0; /* Границы */
+  border: 0; /* Убираем обводку */
+  background-color: #e5e5e5; /* Цвет заливки */
+}
+
 /* Header */
 .header {
   width: 100%; /* Ширина */
@@ -222,12 +232,19 @@ h6 {
   padding: 80px 0; /* Отступы */
 }
 
+/* Модификатор для секции */
+.section--devices {
+  padding-bottom: 0; /* Убираем пэддинги */
+  background: url("../images/devices-bg.jpg") center no-repeat; /* Фон */
+  background-size: cover; /*  */
+}
+
 /* Секция с описанием What we do */
 .section__header {
   width: 100%; /* Ширина */
   max-width: 950px; /* Максимальная ширина */
   margin: 0 auto 40px; /* Создаем Margin'ы */
-  margin-bottom: 40px; /* Отступ снизу */
+  margin-bottom: 50px; /* Отступ снизу */
   text-align: center; /* Выравниваем текст по центру */
 }
 
@@ -361,4 +378,61 @@ h6 {
 .stat__text {
   font-size: 14px; /* Размер шрифта */
   text-transform: uppercase; /* Текст заглавными буквами */
+}
+
+/* Services */
+.services {
+  display: flex; /* Задаем Flex */
+}
+
+/* Расположение айтема */
+.services__item {
+  flex: 1 1 0; /* Чтобы айтемы были одинакой ширины */
+  padding-left: 85px; /* Отступ слева */
+  padding-right: 35px; /* Отступ справа */
+  position: relative; /* Относительная позиция */
+}
+
+/* Стилизуем иконку */
+.services__icon {
+  position: absolute; /* Абсолютная позиция */
+  top: 0; /* Аргументы к Position Absolute */
+  left: 28px; /* Аргументы к Position Absolute */
+  z-index: 1; /* Аргументы к Position Absolute */
+}
+
+/* Стилизуем заголовок */
+.services__title {
+  margin-bottom: 10px; /* Отступ снизу */
+  font-size: 14px; /* Размер шрифта */
+  color: #333; /* Цвет шрифта */
+  text-transform: uppercase; /* Текст заглавными буквами */
+}
+
+/* Стилизуем текст */
+.services__text {
+  font-size: 15px; /* Размер шрифта */
+  color: #999; /* Цвет шрифта */
+  font-family: "Roboto", sans-serif; /* Покдлючаем шрифт */
+}
+
+/* Devices */
+.devices {
+  width: 100%;
+  max-width: 600px; /* Максимальная ширина */
+  margin: 0 auto; /* Выравниваем по центру */
+  position: relative;
+}
+
+/* Делаем изображение с Ipad */
+.devices__item {
+  display: block; /* Block */
+}
+
+/* Делаем изображение с Iphone */
+.devices__item--iphone {
+  position: absolute; /* Открепляем от структуры с Ipda */
+  bottom: -80px; /* Опускаем ниже */
+  right: 0; /* Указываем значения для Position Absolute */
+  z-index: 1; /* Указываем значения для Position Absolute */
 }
