@@ -216,3 +216,149 @@ h6 {
   font-size: 24px; /* Размер шрифта */
   font-weight: 700; /* Жирный шрифт */
 }
+
+/* Section */
+.section {
+  padding: 80px 0; /* Отступы */
+}
+
+/* Секция с описанием What we do */
+.section__header {
+  width: 100%; /* Ширина */
+  max-width: 950px; /* Максимальная ширина */
+  margin: 0 auto 40px; /* Создаем Margin'ы */
+  margin-bottom: 40px; /* Отступ снизу */
+  text-align: center; /* Выравниваем текст по центру */
+}
+
+/* Стилизация надзаголовка */
+.section__suptitle {
+  font-family: "Kaushan Script", cursive; /* Устанавливаем шрифт */
+  font-size: 24px; /* Размер шрифта */
+  color: #333; /* Цвет текста */
+}
+
+/* Стилизация заголовка */
+.section__title {
+  font-size: 30px; /* Размер шрифта */
+  font-weight: 700; /* Жирный шрифт */
+  color: #333; /* Цвет шрифта */
+  text-transform: uppercase; /* Текст заглавными буквами */
+}
+
+/* Добавление псевдо элемента под заголовком */
+.section__title::after {
+  content: ""; /* Содержимое псевдо элемента */
+  display: block; /* Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе */
+  width: 60px; /* Ширина */
+  height: 3px; /* Высота */
+  margin: 30px auto; /* Выравниваем по центру и делаем отступ */
+  background-color: #f38181; /* Цвет заливки */
+}
+
+/* Стилизация текста */
+.section__text {
+  font-size: 15px; /* Размер шрифта */
+  font-family: "Roboto", sans-serif; /* Покдлючаем шрифт */
+  color: #999; /* Цвет шрифта */
+}
+
+/* About */
+.about {
+  margin-top: 80px; /* Отступ от верха */
+  display: flex; /* Задаем flex контент */
+  justify-content: space-between; /* Отодвигаем айтемы друг от друга */
+}
+
+/* Стилизуем айтем */
+.about__item {
+  width: 380px; /* Ширина */
+  position: relative; /* Чтобы позиционировать текст поверх картинки */
+  background-color: #95e1d3; /* Заданм цвет айтема */
+}
+
+/* Стилизуем при наводе на айтем */
+.about__item:hover .about__text {
+  opacity: 1; /* Показываем текст */
+}
+
+/* Стилизуем при наводе на айтем */
+.about__item:hover .about__img {
+  transform: translate3d(-10px, -10px, 0); /* Сдвигаем айтем по оси X и Y */
+}
+
+/* Стилизуем при наводе на картинку */
+.about__item:hover .about__img img {
+  opacity: 0.1; /* Затемняем картинку на 90% */
+}
+
+/* Стилизуем изображение */
+.about__img {
+  background: linear-gradient(
+    to bottom,
+    #f38181,
+    #fce38a
+  ); /* Задаем градиент */
+  transition: transform 0.2s linear; /* Добавляем плавности */
+}
+
+/* Стилизуем изображение */
+.about__img img {
+  display: block; /* Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе */
+  transition: opacity 0.1s linear; /* Устанавливает эффект перехода между двумя состояниями элемента, они могут быть определены с помощью псевдоэлемента :hover или :active */
+}
+
+/* Стилизуем текст */
+.about__text {
+  width: 100%; /* Для position absolute */
+  font-size: 18px; /* Размер шрифта */
+  color: #fff; /* Цвет шрифта */
+  text-transform: uppercase; /* Текст заглавными буквами */
+  font-weight: 700; /* Жирный шрифт */
+  text-align: center; /* Текст посередине */
+  opacity: 0; /* Скрываем текст */
+  position: absolute; /* Чтобы появлсял текст при наводе */
+  top: 50%; /* Делаем текст посередине по оси Y */
+  left: 0; /*  */
+  z-index: 2; /*  */
+  transform: translate3d(0, -50%, 0); /* Делаем текст посередине по оси Y */
+  transition: opacity 0.2s linear; /* Задаем плавность появления текста */
+}
+
+/* Statistics */
+.statistics {
+  background-color: #95e1d3; /* Цвет заливки */
+}
+
+/* Стилизуем контейнер */
+.stat {
+  display: flex; /* Создаем flex контейнер */
+}
+
+/* Стилизуем айтемы */
+.stat__item {
+  flex: 1 1 0; /* Делаем колонки одинаковой ширины */
+  padding: 70px 25px; /* Делаем отступы */
+  border-left: 1px solid #b5eae0; /* Цвет границ */
+  text-align: center; /* Выравниваем по центру */
+  color: #fff; /* Цвет текста */
+}
+
+/* Для стилизации последнего блока */
+.stat__item:last-child {
+  border-right: 1px solid #b5eae0; /* Задаем цвет границы последнему элементу */
+}
+
+/* Стилизуем цифры */
+.stat__count {
+  margin-bottom: 10px; /* Отступ снизу */
+  font-size: 72px; /* Размер шрифта */
+  font-weight: 700; /* Жирный шрифт */
+  line-height: 1; /* Устанавливает интерлиньяж (межстрочный интервал) текста, отсчет ведется от базовой линии шрифта */
+}
+
+/* Стилизуем текст */
+.stat__text {
+  font-size: 14px; /* Размер шрифта */
+  text-transform: uppercase; /* Текст заглавными буквами */
+}
